@@ -18,10 +18,14 @@ module.exports = {
         type: Sequelize.STRING
       },
       email: {
+        type: Sequelize.STRING,
         allowNull: false,
-        type: Sequelize.STRING
+        unique: true,
+        validate: {
+          isEmail: true
+        }
       },
-      password: {
+      passwordDigest: {
         allowNull: false,
         type: Sequelize.STRING
       },
