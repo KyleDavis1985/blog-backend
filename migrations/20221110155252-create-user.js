@@ -10,12 +10,12 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       firstName: {
-        allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       lastName: {
-        allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       email: {
         type: Sequelize.STRING,
@@ -26,8 +26,8 @@ module.exports = {
         }
       },
       passwordDigest: {
-        allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       location: {
         type: Sequelize.STRING

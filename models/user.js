@@ -27,13 +27,13 @@ module.exports = (sequelize, DataTypes) => {
         unique: true,
         validate: {
           isEmail: true
-        },
-        passwordDigest: {
-          type: DataTypes.STRING,
-          allowNull: false
-        },
-        location: DataTypes.STRING
-      }
+        }
+      },
+      passwordDigest: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      location: DataTypes.STRING
     },
     {
       sequelize,
