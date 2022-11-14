@@ -10,14 +10,14 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       postId: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         references: {
-          model: 'comments',
+          model: 'posts',
           key: 'id'
         }
       },
       commentId: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         references: {
           model: 'comments',
           key: 'id'
@@ -25,11 +25,13 @@ module.exports = {
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: new Date()
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: new Date()
       }
     })
   },
