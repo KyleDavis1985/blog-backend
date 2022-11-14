@@ -9,6 +9,19 @@ const GetPosts = async (req, res) => {
   }
 }
 
+const GetPost = async (req, res) => {
+  try {
+    const post = await Post.findOne({
+      where: {
+        id: req.params.post_id
+      }
+    })
+    res.send(post)
+  } catch (error) {
+    throw error
+  }
+}
+
 const CreatePost = async (req, res) => {
   try {
     const post = await Post.create({ ...req.body })
@@ -43,5 +56,6 @@ module.exports = {
   GetPosts,
   CreatePost,
   UpdatePost,
-  DeletePost
+  DeletePost,
+  GetPost
 }
