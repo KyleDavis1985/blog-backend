@@ -9,7 +9,8 @@ module.exports = {
           firstName: 'Erwin',
           lastName: 'Ortiz',
           email: 'eo99@mail.com',
-          password: 'sacramento',
+          passwordDigest: 'sacramento',
+          location: 'FL',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -17,7 +18,8 @@ module.exports = {
           firstName: 'Kyle',
           lastName: 'Davis',
           email: 'kd45@mail.com',
-          password: 'power',
+          passwordDigest: 'power',
+          location: 'CO',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -25,7 +27,8 @@ module.exports = {
           firstName: 'Roberto',
           lastName: 'Rodriguez',
           email: 'rd13@mail.com',
-          password: 'jabroni',
+          passwordDigest: 'jabroni',
+          location: 'IL',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -33,7 +36,8 @@ module.exports = {
           firstName: 'Edward',
           lastName: 'Yuabov',
           email: 'ey65@mail.com',
-          password: 'qwerty',
+          passwordDigest: 'qwerty',
+          location: 'NY',
           createdAt: new Date(),
           updatedAt: new Date()
         }
