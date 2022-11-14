@@ -5,7 +5,7 @@ const GetUsers = async (req, res) => {
     const users = await User.findAll()
     res.send(users)
   } catch (error) {
-    throw error
+    return res.status(500).send(error.message)
   }
 }
 
@@ -14,7 +14,7 @@ const CreateUser = async (req, res) => {
     const user = await User.create({ ...req.body })
     res.send(user)
   } catch (error) {
-    throw error
+    return res.status(500).send(error.message)
   }
 }
 
@@ -26,7 +26,7 @@ const UpdateUser = async (req, res) => {
     )
     res.send(user)
   } catch (error) {
-    throw error
+    return res.status(500).send(error.message)
   }
 }
 
@@ -35,7 +35,7 @@ const DeleteUser = async (req, res) => {
     await User.destroy({ where: { id: req.params.user_id } })
     res.send({ msg: 'User Deleted', payload: req.params.user_id, status: 'Ok' })
   } catch (error) {
-    throw error
+    return res.status(500).send(error.message)
   }
 }
 

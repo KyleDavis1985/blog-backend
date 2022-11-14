@@ -5,7 +5,7 @@ const GetPosts = async (req, res) => {
     const posts = await Post.findAll()
     res.send(posts)
   } catch (error) {
-    throw error
+    return res.status(500).send(error.message)
   }
 }
 
@@ -14,7 +14,7 @@ const CreatePost = async (req, res) => {
     const post = await Post.create({ ...req.body })
     res.send(post)
   } catch (error) {
-    throw error
+    return res.status(500).send(error.message)
   }
 }
 
@@ -26,7 +26,7 @@ const UpdatePost = async (req, res) => {
     )
     res.send(post)
   } catch (error) {
-    throw error
+    return res.status(500).send(error.message)
   }
 }
 
