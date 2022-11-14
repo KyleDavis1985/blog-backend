@@ -9,7 +9,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Comment.belongsTo(models.User, { foreignKey: 'userId' })
-      Comment.belongsTo(models.Post, { as: 'author', foreignKey: 'authorId' })
+      Comment.belongsTo(models.Post, {
+        as: 'associated_post',
+        foreignKey: 'postId'
+      })
       Comment.belongsToMany(models.Post, {
         as: 'comments',
         through: models.PostComment,
@@ -31,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
           key: 'id'
         }
       },
-      authorId: {
+      postId: {
         type: DataTypes.INTEGER,
         onDelete: 'CASCADE',
         references: {

@@ -14,7 +14,10 @@ module.exports = (sequelize, DataTypes) => {
         through: models.PostComment,
         foreignKey: 'postId'
       })
-      Post.hasMany(models.Comment, { as: 'authored', foreignKey: 'authorId' })
+      Post.hasMany(models.Comment, {
+        as: 'associated_comments',
+        foreignKey: 'postId'
+      })
     }
   }
   Post.init(
