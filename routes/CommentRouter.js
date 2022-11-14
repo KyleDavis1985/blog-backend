@@ -1,26 +1,26 @@
 const router = require('express').Router()
-const controller = require('../controllers/PostController')
+const controller = require('../controllers/CommentController')
 const middleware = require('../middleware')
 
-router.get('/', controller.GetPosts)
-router.get('/:post_id', controller.GetPost)
+router.get('/', controller.GetComments)
+router.get('/:comment_id', controller.GetComment)
 router.post(
   '/create',
   middleware.stripToken,
   middleware.verifyToken,
-  controller.CreatePost
+  controller.CreateComment
 )
 router.put(
-  '/:post_id',
+  '/:comment_id',
   middleware.stripToken,
   middleware.verifyToken,
-  controller.UpdatePost
+  controller.UpdateComment
 )
 router.delete(
-  '/:post_id',
+  '/:comment_id',
   middleware.stripToken,
   middleware.verifyToken,
-  controller.DeletePost
+  controller.DeleteComment
 )
 
 module.exports = router
