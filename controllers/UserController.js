@@ -9,6 +9,19 @@ const GetUsers = async (req, res) => {
   }
 }
 
+const GetUser = async (req, res) => {
+  try {
+    const user = await User.findOne({
+      where: {
+        id: req.params.user_id
+      }
+    })
+    res.send(user)
+  } catch (error) {
+    throw error
+  }
+}
+
 const CreateUser = async (req, res) => {
   try {
     const user = await User.create({ ...req.body })
@@ -41,6 +54,7 @@ const DeleteUser = async (req, res) => {
 
 module.exports = {
   GetUsers,
+  GetUser,
   CreateUser,
   UpdateUser,
   DeleteUser
