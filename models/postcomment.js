@@ -7,10 +7,7 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {
-      PostComment.belongsTo(models.Post, { foreignKey: 'postId' })
-      PostComment.belongsTo(models.Comment, { foreignKey: 'commentId' })
-    }
+    static associate(models) {}
   }
   PostComment.init(
     {
