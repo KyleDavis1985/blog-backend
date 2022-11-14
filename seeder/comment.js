@@ -13,21 +13,21 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          title: 'Weight Watchers',
+          comment: 'this calorie deficit is a real killer',
           userId: 2,
           postId: 2,
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
-          title: 'Leaning Diet',
+          comment: 'also cut on sodium to avoid water retention',
           userId: 3,
           postId: 3,
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
-          title: 'Beefcake Diet',
+          comment: 'EAT EVERYTHING!!!?? Hell yea!!!',
           userId: 4,
           postId: 4,
           createdAt: new Date(),
