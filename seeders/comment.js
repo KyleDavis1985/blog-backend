@@ -3,7 +3,7 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert(
-      'posts',
+      'comments',
       [
         {
           comment: 'tasteless food',
@@ -39,6 +39,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('posts', null, {})
+    return queryInterface.bulkDelete('comments', null, {})
   }
 }
