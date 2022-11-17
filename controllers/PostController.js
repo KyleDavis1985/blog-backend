@@ -24,7 +24,7 @@ const GetPost = async (req, res) => {
 
 const CreatePost = async (req, res) => {
   try {
-    const post = await Post.create({ ...req.body })
+    const post = await Post.create(req.body)
     res.send(post)
   } catch (error) {
     return res.status(500).send(error.message)
