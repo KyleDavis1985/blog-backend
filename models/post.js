@@ -30,9 +30,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.TEXT,
         allowNull: false
       },
-      privacy: {
-        type: DataTypes.BOOLEAN
-      },
+      privacy: DataTypes.BOOLEAN,
       image: DataTypes.TEXT,
       userId: {
         type: DataTypes.INTEGER,
