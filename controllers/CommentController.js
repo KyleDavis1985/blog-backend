@@ -27,7 +27,7 @@ const CreateComment = async (req, res) => {
     const comment = await Comment.create({ ...req.body })
     res.send(comment)
   } catch (error) {
-    return res.status(500).send(error.message)
+    throw error
   }
 }
 
