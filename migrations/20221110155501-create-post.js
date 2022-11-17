@@ -20,6 +20,9 @@ module.exports = {
       image: {
         type: Sequelize.TEXT
       },
+      privacy: {
+        type: Sequelize.STRING
+      },
       userId: {
         type: Sequelize.INTEGER,
         onDelete: 'CASCADE',

@@ -30,6 +30,9 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.TEXT,
         allowNull: false
       },
+      privacy: {
+        type: DataTypes.STRING
+      },
       image: DataTypes.TEXT,
       userId: {
         type: DataTypes.INTEGER,
