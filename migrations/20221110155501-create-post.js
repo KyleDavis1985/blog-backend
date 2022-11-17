@@ -21,7 +21,7 @@ module.exports = {
         type: Sequelize.TEXT
       },
       privacy: {
-        type: Sequelize.STRING
+        type: Sequelize.BOOLEAN
       },
       userId: {
         type: Sequelize.INTEGER,
